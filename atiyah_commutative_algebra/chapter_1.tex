@@ -1,0 +1,54 @@
+\documentclass{solutions}
+\usepackage{preamble}
+
+\settitle{Commutative Algebra, Atiyah, Chapter 1}
+\setauthor{Cameron Derwin}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{question}
+Note that $x$ is nilpotent iff $-x$ is nilpotent: $(-x)^n = \pm x^n$, so $(-x)^n = 0$ iff $x^n = 0$.
+Thus, without loss of generality, we may show that $1 - x$ is a unit for $x$ nilpotent.
+Then
+\[ (1 - x)(1 + x + \cdots + x^{n-1}) = 1 - x^n = 1 \]
+so indeed $1 - x$, and thus $1 + x$, is a unit.
+
+Indeed, if $x$ is nilpotent and $u\in A^\times$, $u + x = u(1 + u^{-1}x)$.
+Since $u^{-1}x$ is nilpotent, $1 + u^{-1}x$ is a unit and $u + x$ is a product of units, and thus a unit.
+\end{question}
+
+\begin{question}
+(i) Suppose $g = b_0 + b_1 x + \cdots + b_m x^m$ is inverse to $f$.
+We argue by induction on $r$ that $a_n^{r + 1} b_{m - r} = 0$.
+For $r = 0$, note that $(fg)_{m + n} = a_nb_m = 0$, so we must have $a_nb_m = 0$.
+Now suppose that $a_n^s b_{m - s} = 0$ for all $s < r$.
+Note then that $a_n^r b_{m - s} = 0$ for $s < r$.
+Then observe that
+\[ a_n^{r-1} (fg)_{m + n - r} = \sum_{i=0}^k a_n^{r-1} a_{n - i} b_{m - r + i} = a_n^r b_{m - r} + \sum_{i=1}^n a_{n - i} a_n^r b_{m - (r - i)}= a_n^r b_{m -r} = 0 \]
+as desired.
+
+Conversely suppose $a_0$ is a unit and $a_1, \ldots, a_n$ are nilpotent.
+Then $a_k x^k$ is nilpotent for $k > 1$, and thus $n = a_1 x + \cdots + a_m x^m$ is nilpotent.
+Then by problem (1), $f = u + n$ is a unit.
+
+(ii) First we show that if $f$ is nilpotent, then $a_0, \ldots, a_n$ are nilpotent.
+We induct on $n$; if $n = 0$, then $f = a_0$ and thus $a_0$ must be nilpotent.
+Now suppose that for all polynomials $g\in A[x]$, $g$ nilpotent implies that $(g)_i$ is nilpotent for $0\leq i\leq \deg g$.
+Then suppose $f^k = 0$; $(f^k)_{kn} = a_n^k = 0$, so $a_n$ is nilpotent.
+But then since the nilpotent elements are closed under subtraction, $f - a_nx^n = a_{n-1} x^{n-1} + \cdots + a_0$ is nilpotent, and by the inductive hypothesis we also must have that $a_{n-1}, \ldots, a_0$ are nilpotent.
+Thus we are done.
+
+Now suppose $a_0, \ldots, a_n$ are nilpotent; clearly $f\in (a_0, \ldots, a_n)\subseteq \mathcal{N}$, so $f$ is nilpotent.
+
+(iii) Suppose $f$ is a zero divisor, and choose $g = b_m x^n + \cdots + b_0$ of minimal degree $m$ such that $fg = 0$ (and $g\neq 0$).
+Then note that $a_n g_m = 0$, and so $a_n g$ has degree strictly less than $f$.
+Then note $a_n g$ also annihilates $f$, since $fg\mid a_n fg$, so $a_n g = 0$.
+
+The converse is trivial.
+
+(iv) 
+\end{question}
+
+\end{document}

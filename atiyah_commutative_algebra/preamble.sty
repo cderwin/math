@@ -1,0 +1,127 @@
+\ProvidesPackage{preamble}
+
+\usepackage{amsmath, amsfonts, amsthm, amssymb}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage{mathrsfs}
+\usepackage{tikz-cd}
+
+\graphicspath{ {images/} }
+\usetikzlibrary{cd}
+
+\theoremstyle{theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem{prop}{Proposition}
+\newtheorem*{prop*}{Proposition}
+
+\theoremstyle{definition}
+\newtheorem{prob}{Problem}
+\newtheorem*{sol}{Solution}
+
+
+% General mathematics
+\renewcommand{\phi}{\varphi}
+\renewcommand{\P}{\mathbb{P}}
+\newcommand{\powset}[1]{\mathcal{P}\left( {#1} \right)}
+\newcommand{\twiddle}[1]{\widetilde{#1}}
+\newcommand{\conj}[1]{{#1}^\ast}
+\newcommand{\evat}[1]{\left. {#1} \right\rvert}
+\DeclareMathOperator{\sgn}{sgn}
+
+\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
+\DeclarePairedDelimiter{\card}{\vert}{\vert}
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+\DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}
+\DeclarePairedDelimiter{\parens}{\lparen}{\rparen}
+
+% Number fields and algebras
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\RP}{\mathbb{RP}}
+\newcommand{\CP}{\mathbb{CP}}
+\newcommand{\Quat}{\mathbb{H}}
+
+% Basic analysis
+\newcommand{\indc}[1]{\Chari_{#1}}
+\DeclarePairedDelimiter{\ip}{\langle}{\rangle}
+\DeclarePairedDelimiter{\norm}{\|}{\|}
+\DeclareMathOperator{\gr}{gr}
+
+% Complex Analysis
+\DeclareMathOperator{\Arg}{Arg}
+
+% General topology
+\DeclareMathOperator{\inte}{int}
+\DeclareMathOperator{\Int}{int}
+\DeclareMathOperator{\supp}{supp}
+\newcommand{\bd}[1]{\partial {#1}}
+\newcommand{\clos}[1]{\overline{#1}}
+
+% Lie Groups
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\SL}{SL}
+\DeclareMathOperator{\SU}{SU}
+\DeclareMathOperator{\Orth}{O}
+\DeclareMathOperator{\SO}{SO}
+\DeclareMathOperator{\U}{U}
+
+% Categories
+\DeclareMathOperator{\Obj}{Obj}
+\DeclareMathOperator{\Mor}{Mor}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Id}{Id}
+\newcommand{\mono}{\xhookrightarrow{}}
+\newcommand{\epi}{\twoheadrightarrow}
+\newcommand{\iso}{\xrightarrow{\sim}}
+\DeclareMathOperator{\Top}{Top}
+\DeclareMathOperator{\Set}{Set}
+\DeclareMathOperator{\hTop}{hTop}
+
+% Algebra
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\Char}{char}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\Inn}{Inn}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Stab}{Stab}
+\DeclareMathOperator{\Conj}{Conj}
+\DeclareMathOperator{\Fix}{Fix}
+\newcommand{\divides}{\mid}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\ev}{\text{ev}}
+
+
+% Linear Algebra
+\DeclareMathOperator{\Mat}{Mat}
+\DeclareMathOperator{\pr}{pr}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\dt}{det}
+\DeclareMathOperator{\codim}{codim}
+\DeclareMathOperator{\Span}{span}
+\newcommand{\trans}{\text{tr}}
+
+% Lie theory
+\DeclareMathOperator{\Skew}{Skew}
+\DeclareMathOperator{\adj}{adj}
+\DeclareMathOperator{\Ad}{Ad}
+\DeclareMathOperator{\ad}{ad}
+\DeclareMathOperator{\Adj}{Adj}
+
+% Differential geometry
+\DeclareMathOperator{\Div}{div}
+\DeclareMathOperator{\grad}{grad}
+\newcommand{\VF}{\mathfrak{X}}
+
+ % Experimental
+\newlength{\arrow}
+\settowidth{\arrow}{\scriptsize$100000$}
+\newcommand*{\rarrow}[1]{\xrightarrow{\mathmakebox[\arrow]{#1}}}
+\newcommand{\st}{\text{ such that }}
